@@ -1,21 +1,21 @@
 package ir.ac.kntu.Repository;
 
-import ir.ac.kntu.Model.User_Info;
+import ir.ac.kntu.Model.Flight;
 
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-public class User_infoDao implements Repository<User_Info, Long> {
-    public User_Info findById(Long aLong) {
+public class FlightDao implements Repository<Flight,Long> {
+    public Flight findById(Long aLong) {
         return null;
     }
 
-    public List<User_Info> findByIDs(Collections ids) {
+    public List<Flight> findByIDs(Collections ids) {
         return null;
     }
 
-    public List<User_Info> findAll() {
+    public List<Flight> findAll() {
         return null;
     }
 
@@ -27,7 +27,7 @@ public class User_infoDao implements Repository<User_Info, Long> {
         return null;
     }
 
-    public User_Info save(User_Info E) {
+    public Flight save(Flight E) {
         return null;
     }
 }

@@ -1,12 +1,12 @@
 package ir.ac.kntu.Model;
 
 public class Bus_Ticket {
-    private int id;
-    private int passengers;
-    private int price;
-    private int bus_id;
+    private Integer id;
+    private Integer passengers;
+    private Integer price;
+    private Integer bus_id;
 
-    public Bus_Ticket(int id, int passengers, int price, int bus_id) {
+    public Bus_Ticket(Integer id, Integer passengers, Integer price, Integer bus_id) {
         this.id = id;
         this.passengers = passengers;
         this.price = price;
@@ -14,35 +14,35 @@ public class Bus_Ticket {
     }
 
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getPassengers() {
+    public Integer getPassengers() {
         return passengers;
     }
 
-    public void setPassengers(int passengers) {
+    public void setPassengers(Integer passengers) {
         this.passengers = passengers;
     }
 
-    public int getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 
-    public int getBus_id() {
+    public Integer getBus_id() {
         return bus_id;
     }
 
-    public void setBus_id(int bus_id) {
+    public void setBus_id(Integer bus_id) {
         this.bus_id = bus_id;
     }
 }

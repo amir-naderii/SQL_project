@@ -1,40 +1,40 @@
 package ir.ac.kntu.Model;
 
 public class Flight_Ticket {
-    private int id;
-    private int passengers;
-    private int price;
+    private Integer id;
+    private Integer passengers;
+    private Integer price;
     private String flight_type;
     private String flight_class;
 
-    public Flight_Ticket(int id, int passengers, int price, String flight_type) {
+    public Flight_Ticket(Integer id, Integer passengers, Integer price, String flight_type) {
         this.id = id;
         this.passengers = passengers;
         this.price = price;
         this.flight_type = flight_type;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getPassengers() {
+    public Integer getPassengers() {
         return passengers;
     }
 
-    public void setPassengers(int passengers) {
+    public void setPassengers(Integer passengers) {
         this.passengers = passengers;
     }
 
-    public int getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 

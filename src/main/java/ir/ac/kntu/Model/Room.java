@@ -1,31 +1,31 @@
 package ir.ac.kntu.Model;
 
 public class Room {
-    private int id;
-    private int hotel_id;
+    private Integer id;
+    private Integer hotel_id;
     private String type;
-    private int capacity;
+    private Integer capacity;
 
-    public Room(int id, int hotel_id, String type, int capacity) {
+    public Room(Integer id, Integer hotel_id, String type, Integer capacity) {
         this.id = id;
         this.hotel_id = hotel_id;
         this.type = type;
         this.capacity = capacity;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getHotel_id() {
+    public Integer getHotel_id() {
         return hotel_id;
     }
 
-    public void setHotel_id(int hotel_id) {
+    public void setHotel_id(Integer hotel_id) {
         this.hotel_id = hotel_id;
     }
 
@@ -37,11 +37,11 @@ public class Room {
         this.type = type;
     }
 
-    public int getCapacity() {
+    public Integer getCapacity() {
         return capacity;
     }
 
-    public void setCapacity(int capacity) {
+    public void setCapacity(Integer capacity) {
         this.capacity = capacity;
     }
 }

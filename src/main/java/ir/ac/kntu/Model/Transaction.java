@@ -3,14 +3,14 @@ package ir.ac.kntu.Model;
 import java.util.Date;
 
 public class Transaction {
-    private int id;
+    private Integer id;
     private Date date;
-    private int amount;
+    private Integer amount;
     private String credit_card_number;
-    private int charge_user_id;
+    private Integer charge_user_id;
     private String type;
 
-    public Transaction(int id, Date date, int amount, String credit_card_number, int charge_user_id, String type) {
+    public Transaction(Integer id, Date date, Integer amount, String credit_card_number, Integer charge_user_id, String type) {
         this.id = id;
         this.date = date;
         this.amount = amount;
@@ -19,11 +19,11 @@ public class Transaction {
         this.type = type;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -35,11 +35,11 @@ public class Transaction {
         this.date = date;
     }
 
-    public int getAmount() {
+    public Integer getAmount() {
         return amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(Integer amount) {
         this.amount = amount;
     }
 
@@ -51,11 +51,11 @@ public class Transaction {
         this.credit_card_number = credit_card_number;
     }
 
-    public int getCharge_user_id() {
+    public Integer getCharge_user_id() {
         return charge_user_id;
     }
 
-    public void setCharge_user_id(int charge_user_id) {
+    public void setCharge_user_id(Integer charge_user_id) {
         this.charge_user_id = charge_user_id;
     }
 

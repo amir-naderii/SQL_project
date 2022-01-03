@@ -3,7 +3,7 @@ package ir.ac.kntu.Model;
 import java.util.Date;
 
 public class Flight {
-    private int id;
+    private Integer id;
     private String departure_city;
     private String departure_airport;
     private String destination_city;
@@ -11,7 +11,7 @@ public class Flight {
     private Date travel_date;
     private String company;
 
-    public Flight(int id, String departure_city, String departure_airport, String destination_city,
+    public Flight(Integer id, String departure_city, String departure_airport, String destination_city,
                   String destination_airport, Date travel_date) {
         this.id = id;
         this.departure_city = departure_city;
@@ -21,11 +21,11 @@ public class Flight {
         this.travel_date = travel_date;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

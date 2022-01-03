@@ -3,33 +3,33 @@ package ir.ac.kntu.Model;
 import java.util.Date;
 
 public class User {
-    private int id;
-    private int credit;
+    private Integer id;
+    private Integer credit;
     private String user_info_id;
     private Date creation_date;
     private Date modification_date;
     private String modification_reason;
 
-    public User(int id, int credit, String user_info_id, Date creation_date) {
+    public User(Integer id, Integer credit, String user_info_id, Date creation_date) {
         this.id = id;
         this.credit = credit;
         this.user_info_id = user_info_id;
         this.creation_date = creation_date;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getCredit() {
+    public Integer getCredit() {
         return credit;
     }
 
-    public void setCredit(int credit) {
+    public void setCredit(Integer credit) {
         this.credit = credit;
     }
 

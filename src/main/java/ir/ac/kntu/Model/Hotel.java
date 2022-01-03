@@ -1,15 +1,15 @@
 package ir.ac.kntu.Model;
 
 public class Hotel {
-    private int id;
-    private int stars;
-    private int popularity;
+    private Integer id;
+    private Integer stars;
+    private Integer popularity;
     private String address;
     private String name;
     private String facilities;
     private Hotel_type hotel_type;
 
-    public Hotel(int id, int stars, int popularity, String address, String name, String facilities, Hotel_type hotel_type) {
+    public Hotel(Integer id, Integer stars, Integer popularity, String address, String name, String facilities, Hotel_type hotel_type) {
         this.id = id;
         this.stars = stars;
         this.popularity = popularity;
@@ -19,27 +19,27 @@ public class Hotel {
         this.hotel_type = hotel_type;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getStars() {
+    public Integer getStars() {
         return stars;
     }
 
-    public void setStars(int stars) {
+    public void setStars(Integer stars) {
         this.stars = stars;
     }
 
-    public int getPopularity() {
+    public Integer getPopularity() {
         return popularity;
     }
 
-    public void setPopularity(int popularity) {
+    public void setPopularity(Integer popularity) {
         this.popularity = popularity;
     }
 

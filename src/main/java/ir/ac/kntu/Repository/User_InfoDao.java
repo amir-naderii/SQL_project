@@ -6,8 +6,9 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-public class User_InfoDao implements Repository<User_Info, Long> {
-    public User_Info findById(Long aLong) {
+public class User_InfoDao implements Repository<User_Info, Integer> {
+
+    public User_Info findById(Integer integer) {
         return null;
     }
 
@@ -19,11 +20,11 @@ public class User_InfoDao implements Repository<User_Info, Long> {
         return null;
     }
 
-    public Boolean deleteByID(Long aLong) {
+    public Boolean deleteByID(Integer integer) {
         return null;
     }
 
-    public Boolean DeleteByIDs(Collection<Long> longs) {
+    public Boolean DeleteByIDs(Collection<Integer> integers) {
         return null;
     }
 

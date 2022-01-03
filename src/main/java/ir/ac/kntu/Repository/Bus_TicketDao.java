@@ -6,8 +6,8 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-public class Bus_TicketDao implements Repository<Bus_Ticket,Long> {
-    public Bus_Ticket findById(Long aLong) {
+public class Bus_TicketDao implements Repository<Bus_Ticket,Integer> {
+    public Bus_Ticket findById(Integer integer) {
         return null;
     }
 
@@ -19,11 +19,11 @@ public class Bus_TicketDao implements Repository<Bus_Ticket,Long> {
         return null;
     }
 
-    public Boolean deleteByID(Long aLong) {
+    public Boolean deleteByID(Integer integer) {
         return null;
     }
 
-    public Boolean DeleteByIDs(Collection<Long> longs) {
+    public Boolean DeleteByIDs(Collection<Integer> integers) {
         return null;
     }
 

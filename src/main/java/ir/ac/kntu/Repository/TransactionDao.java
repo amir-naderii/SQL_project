@@ -6,8 +6,9 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-public class TransactionDao implements Repository<Transaction,Long> {
-    public Transaction findById(Long aLong) {
+public class TransactionDao implements Repository<Transaction,Integer> {
+
+    public Transaction findById(Integer integer) {
         return null;
     }
 
@@ -19,11 +20,11 @@ public class TransactionDao implements Repository<Transaction,Long> {
         return null;
     }
 
-    public Boolean deleteByID(Long aLong) {
+    public Boolean deleteByID(Integer integer) {
         return null;
     }
 
-    public Boolean DeleteByIDs(Collection<Long> longs) {
+    public Boolean DeleteByIDs(Collection<Integer> integers) {
         return null;
     }
 

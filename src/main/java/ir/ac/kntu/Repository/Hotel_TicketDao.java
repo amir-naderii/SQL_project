@@ -6,8 +6,9 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-public class Hotel_TicketDao implements Repository<Hotel_Ticket,Long> {
-    public Hotel_Ticket findById(Long aLong) {
+public class Hotel_TicketDao implements Repository<Hotel_Ticket,Integer> {
+
+    public Hotel_Ticket findById(Integer integer) {
         return null;
     }
 
@@ -19,11 +20,11 @@ public class Hotel_TicketDao implements Repository<Hotel_Ticket,Long> {
         return null;
     }
 
-    public Boolean deleteByID(Long aLong) {
+    public Boolean deleteByID(Integer integer) {
         return null;
     }
 
-    public Boolean DeleteByIDs(Collection<Long> longs) {
+    public Boolean DeleteByIDs(Collection<Integer> integers) {
         return null;
     }
 

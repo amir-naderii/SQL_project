@@ -6,8 +6,9 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-public class RoomDao implements Repository<Room,Long> {
-    public Room findById(Long aLong) {
+public class RoomDao implements Repository<Room,Integer> {
+
+    public Room findById(Integer integer) {
         return null;
     }
 
@@ -19,11 +20,11 @@ public class RoomDao implements Repository<Room,Long> {
         return null;
     }
 
-    public Boolean deleteByID(Long aLong) {
+    public Boolean deleteByID(Integer integer) {
         return null;
     }
 
-    public Boolean DeleteByIDs(Collection<Long> longs) {
+    public Boolean DeleteByIDs(Collection<Integer> integers) {
         return null;
     }
 

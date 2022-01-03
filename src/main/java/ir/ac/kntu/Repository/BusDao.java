@@ -6,8 +6,10 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-public class BusDao implements Repository<Bus,Long> {
-    public Bus findById(Long aLong) {
+public class BusDao implements Repository<Bus,Integer> {
+
+
+    public Bus findById(Integer integer) {
         return null;
     }
 
@@ -19,11 +21,11 @@ public class BusDao implements Repository<Bus,Long> {
         return null;
     }
 
-    public Boolean deleteByID(Long aLong) {
+    public Boolean deleteByID(Integer integer) {
         return null;
     }
 
-    public Boolean DeleteByIDs(Collection<Long> longs) {
+    public Boolean DeleteByIDs(Collection<Integer> integers) {
         return null;
     }
 

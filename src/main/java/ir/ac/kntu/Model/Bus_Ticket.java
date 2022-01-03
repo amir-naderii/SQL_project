@@ -4,7 +4,6 @@ public class Bus_Ticket {
     private int id;
     private int passengers;
     private int price;
-    private String company;
     private int bus_id;
 
     public Bus_Ticket(int id, int passengers, int price, int bus_id) {
@@ -14,13 +13,6 @@ public class Bus_Ticket {
         this.bus_id = bus_id;
     }
 
-    public Bus_Ticket(int id, int passengers, int price, String company, int bus_id) {
-        this.id = id;
-        this.passengers = passengers;
-        this.price = price;
-        this.company = company;
-        this.bus_id = bus_id;
-    }
 
     public int getId() {
         return id;
@@ -44,14 +36,6 @@ public class Bus_Ticket {
 
     public void setPrice(int price) {
         this.price = price;
-    }
-
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
     }
 
     public int getBus_id() {

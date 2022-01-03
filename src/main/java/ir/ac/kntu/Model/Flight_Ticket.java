@@ -14,14 +14,6 @@ public class Flight_Ticket {
         this.flight_type = flight_type;
     }
 
-    public Flight_Ticket(int id, int passengers, int price, String flight_type, String flight_class) {
-        this.id = id;
-        this.passengers = passengers;
-        this.price = price;
-        this.flight_type = flight_type;
-        this.flight_class = flight_class;
-    }
-
     public int getId() {
         return id;
     }

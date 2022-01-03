@@ -7,6 +7,8 @@ public class User {
     private int credit;
     private String user_info_id;
     private Date creation_date;
+    private Date modification_date;
+    private String modification_reason;
 
     public User(int id, int credit, String user_info_id, Date creation_date) {
         this.id = id;
@@ -45,5 +47,21 @@ public class User {
 
     public void setCreation_date(Date creation_date) {
         this.creation_date = creation_date;
+    }
+
+    public Date getModification_date() {
+        return modification_date;
+    }
+
+    public String getModification_reason() {
+        return modification_reason;
+    }
+
+    public void setModification_date(Date modification_date) {
+        this.modification_date = modification_date;
+    }
+
+    public void setModification_reason(String modification_reason) {
+        this.modification_reason = modification_reason;
     }
 }

@@ -11,14 +11,14 @@ public class Bus {
     private Date travel_date;
     private String company;
 
-    public Bus(int id, String departure_city, String departure_terminal, String destination_city, String destination_terminal, Date travel_date, String company) {
+    public Bus(int id, String departure_city, String departure_terminal, String destination_city,
+               String destination_terminal, Date travel_date) {
         this.id = id;
         this.departure_city = departure_city;
         this.departure_terminal = departure_terminal;
         this.destination_city = destination_city;
         this.destination_terminal = destination_terminal;
         this.travel_date = travel_date;
-        this.company = company;
     }
 
     public int getId() {

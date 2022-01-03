@@ -11,14 +11,14 @@ public class Flight {
     private Date travel_date;
     private String company;
 
-    public Flight(int id, String departure_city, String departure_airport, String destination_city, String destination_airport, Date travel_date, String company) {
+    public Flight(int id, String departure_city, String departure_airport, String destination_city,
+                  String destination_airport, Date travel_date) {
         this.id = id;
         this.departure_city = departure_city;
         this.departure_airport = departure_airport;
         this.destination_city = destination_city;
         this.destination_airport = destination_airport;
         this.travel_date = travel_date;
-        this.company = company;
     }
 
     public int getId() {

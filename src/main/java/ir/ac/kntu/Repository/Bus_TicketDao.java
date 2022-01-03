@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Bus_TicketDao implements Repository<Bus_Ticket,Integer> {
+
     public Bus_Ticket findById(Integer integer) {
         return null;
     }

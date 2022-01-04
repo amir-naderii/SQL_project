@@ -1,0 +1,49 @@
+Index: .idea/dataSources.local.xml
+===================================================================
+diff --git a/.idea/dataSources.local.xml b/.idea/dataSources.local.xml
+deleted file mode 100644
+--- a/.idea/dataSources.local.xml	(revision 59f8b2f5fef1abf48763189ffe4c13eb62e61176)
++++ /dev/null	(revision 59f8b2f5fef1abf48763189ffe4c13eb62e61176)
+@@ -1,21 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="dataSourceStorageLocal">
+-    <data-source name="AliBaba@localhost" uuid="cdc287ee-6f02-48e6-a7d0-5cda8adeaa45">
+-      <database-info product="Microsoft SQL Server" version="15.00.2000" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 9.4 for SQL Server" driver-version="9.4.0.0" dbms="MSSQL" exact-version="15.0.2000" exact-driver-version="9.4">
+-        <extra-name-characters>$#@</extra-name-characters>
+-        <identifier-quote-string>&quot;</identifier-quote-string>
+-      </database-info>
+-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+-      <secret-storage>master_key</secret-storage>
+-      <user-name>Tanaz</user-name>
+-      <schema-mapping>
+-        <introspection-scope>
+-          <node kind="database" qname="@">
+-            <node kind="schema" qname="@" />
+-          </node>
+-        </introspection-scope>
+-      </schema-mapping>
+-    </data-source>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/dataSources.xml
+===================================================================
+diff --git a/.idea/dataSources.xml b/.idea/dataSources.xml
+deleted file mode 100644
+--- a/.idea/dataSources.xml	(revision 59f8b2f5fef1abf48763189ffe4c13eb62e61176)
++++ /dev/null	(revision 59f8b2f5fef1abf48763189ffe4c13eb62e61176)
+@@ -1,12 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+-    <data-source source="LOCAL" name="AliBaba@localhost" uuid="cdc287ee-6f02-48e6-a7d0-5cda8adeaa45">
+-      <driver-ref>sqlserver.ms</driver-ref>
+-      <synchronize>true</synchronize>
+-      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+-      <jdbc-url>jdbc:sqlserver://localhost:1433;database=AliBaba</jdbc-url>
+-      <working-dir>$ProjectFileDir$</working-dir>
+-    </data-source>
+-  </component>
+-</project>
+\ No newline at end of file

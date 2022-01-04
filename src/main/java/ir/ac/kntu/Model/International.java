@@ -7,6 +7,4 @@ public class International extends Flight{
                          String destination_airport, Date travel_date) {
         super(id, departure_city, departure_airport, destination_city, destination_airport, travel_date);
     }
-
-
 }

@@ -76,4 +76,17 @@ public class Bus {
     public void setCompany(String company) {
         this.company = company;
     }
+
+    @Override
+    public String toString() {
+        return "Bus{" +
+                "id=" + id +
+                ", departure_city='" + departure_city + '\'' +
+                ", departure_terminal='" + departure_terminal + '\'' +
+                ", destination_city='" + destination_city + '\'' +
+                ", destination_terminal='" + destination_terminal + '\'' +
+                ", travel_date=" + travel_date +
+                ", company='" + company + '\'' +
+                '}';
+    }
 }

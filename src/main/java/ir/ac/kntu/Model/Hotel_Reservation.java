@@ -44,4 +44,14 @@ public class Hotel_Reservation {
     public void setTransaction_id(Integer transaction_id) {
         this.transaction_id = transaction_id;
     }
+
+    @Override
+    public String toString() {
+        return "Hotel_Reservation{" +
+                "id=" + id +
+                ", hotel_ticket_id=" + hotel_ticket_id +
+                ", user_id=" + user_id +
+                ", transaction_id=" + transaction_id +
+                '}';
+    }
 }

@@ -34,4 +34,13 @@ public class Flight_Ticket_Relation {
     public void setFlight_ticket_id(Integer flight_ticket_id) {
         this.flight_ticket_id = flight_ticket_id;
     }
+
+    @Override
+    public String toString() {
+        return "Flight_Ticket_Relation{" +
+                "id=" + id +
+                ", flight_id=" + flight_id +
+                ", flight_ticket_id=" + flight_ticket_id +
+                '}';
+    }
 }

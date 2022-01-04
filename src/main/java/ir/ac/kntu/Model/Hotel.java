@@ -74,4 +74,17 @@ public class Hotel {
     public void setHotel_type(Hotel_type hotel_type) {
         this.hotel_type = hotel_type;
     }
+
+    @Override
+    public String toString() {
+        return "Hotel{" +
+                "id=" + id +
+                ", stars=" + stars +
+                ", popularity=" + popularity +
+                ", address='" + address + '\'' +
+                ", name='" + name + '\'' +
+                ", facilities='" + facilities + '\'' +
+                ", hotel_type=" + hotel_type +
+                '}';
+    }
 }

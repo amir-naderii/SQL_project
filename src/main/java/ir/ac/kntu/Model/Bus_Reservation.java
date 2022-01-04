@@ -44,4 +44,14 @@ public class Bus_Reservation {
     public void setTransaction_id(Integer transaction_id) {
         this.transaction_id = transaction_id;
     }
+
+    @Override
+    public String toString() {
+        return "Bus_Reservation{" +
+                "id=" + id +
+                ", bus_ticket_id=" + bus_ticket_id +
+                ", user_id=" + user_id +
+                ", transaction_id=" + transaction_id +
+                '}';
+    }
 }

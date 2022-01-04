@@ -66,4 +66,16 @@ public class Transaction {
     public void setType(String type) {
         this.type = type;
     }
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "id=" + id +
+                ", date=" + date +
+                ", amount=" + amount +
+                ", credit_card_number='" + credit_card_number + '\'' +
+                ", charge_user_id=" + charge_user_id +
+                ", type='" + type + '\'' +
+                '}';
+    }
 }

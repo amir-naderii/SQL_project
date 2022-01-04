@@ -53,4 +53,15 @@ public class Flight_Ticket {
     public void setFlight_class(String flight_class) {
         this.flight_class = flight_class;
     }
+
+    @Override
+    public String toString() {
+        return "Flight_Ticket{" +
+                "id=" + id +
+                ", passengers=" + passengers +
+                ", price=" + price +
+                ", flight_type='" + flight_type + '\'' +
+                ", flight_class='" + flight_class + '\'' +
+                '}';
+    }
 }

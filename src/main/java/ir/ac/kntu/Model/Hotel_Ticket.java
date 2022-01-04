@@ -66,4 +66,16 @@ public class Hotel_Ticket {
     public void setRoom_id(Integer room_id) {
         this.room_id = room_id;
     }
+
+    @Override
+    public String toString() {
+        return "Hotel_Ticket{" +
+                "id=" + id +
+                ", price=" + price +
+                ", check_in=" + check_in +
+                ", check_out=" + check_out +
+                ", hotel_id=" + hotel_id +
+                ", room_id=" + room_id +
+                '}';
+    }
 }

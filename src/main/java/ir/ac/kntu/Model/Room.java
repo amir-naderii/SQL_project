@@ -44,4 +44,14 @@ public class Room {
     public void setCapacity(Integer capacity) {
         this.capacity = capacity;
     }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "id=" + id +
+                ", hotel_id=" + hotel_id +
+                ", type='" + type + '\'' +
+                ", capacity=" + capacity +
+                '}';
+    }
 }

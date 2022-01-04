@@ -44,4 +44,14 @@ public class Flight_Reservation {
     public void setTransaction(Integer transaction) {
         this.transaction = transaction;
     }
+
+    @Override
+    public String toString() {
+        return "Flight_Reservation{" +
+                "id=" + id +
+                ", flight_ticket_id=" + flight_ticket_id +
+                ", user_id=" + user_id +
+                ", transaction=" + transaction +
+                '}';
+    }
 }

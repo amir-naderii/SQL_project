@@ -64,4 +64,16 @@ public class User {
     public void setModification_reason(String modification_reason) {
         this.modification_reason = modification_reason;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", credit=" + credit +
+                ", user_info_id='" + user_info_id + '\'' +
+                ", creation_date=" + creation_date +
+                ", modification_date=" + modification_date +
+                ", modification_reason='" + modification_reason + '\'' +
+                '}';
+    }
 }

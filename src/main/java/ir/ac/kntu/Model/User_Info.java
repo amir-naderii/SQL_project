@@ -76,4 +76,17 @@ public class User_Info {
     public void setPass(String pass) {
         Pass = pass;
     }
+
+    @Override
+    public String toString() {
+        return "User_Info{" +
+                "id_number='" + id_number + '\'' +
+                ", email='" + email + '\'' +
+                ", phone_number='" + phone_number + '\'' +
+                ", full_name='" + full_name + '\'' +
+                ", Gender='" + Gender + '\'' +
+                ", birth_date=" + birth_date +
+                ", Pass='" + Pass + '\'' +
+                '}';
+    }
 }

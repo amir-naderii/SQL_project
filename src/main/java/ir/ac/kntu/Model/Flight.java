@@ -76,4 +76,17 @@ public class Flight {
     public void setCompany(String company) {
         this.company = company;
     }
+
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "id=" + id +
+                ", departure_city='" + departure_city + '\'' +
+                ", departure_airport='" + departure_airport + '\'' +
+                ", destination_city='" + destination_city + '\'' +
+                ", destination_airport='" + destination_airport + '\'' +
+                ", travel_date=" + travel_date +
+                ", company='" + company + '\'' +
+                '}';
+    }
 }

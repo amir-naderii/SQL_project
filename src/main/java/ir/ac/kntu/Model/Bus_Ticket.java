@@ -55,4 +55,14 @@ public class Bus_Ticket {
     public void setBus_id(Integer bus_id) {
         this.bus_id = bus_id;
     }
+
+    @Override
+    public String toString() {
+        return "Bus_Ticket{" +
+                "id=" + id +
+                ", passengers=" + passengers +
+                ", price=" + price +
+                ", bus_id=" + bus_id +
+                '}';
+    }
 }

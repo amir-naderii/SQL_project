@@ -31,7 +31,7 @@ public class DomesticDao implements Repository<Domestic, Integer>{
             ));
 
             sqlStm.put("insert",connection.prepareStatement(
-                    "INSERT INTO Domestic SET VALUES(?)"
+                    "INSERT INTO Domestic VALUES(?)"
             ));
         } catch (SQLException e) {
             e.printStackTrace();

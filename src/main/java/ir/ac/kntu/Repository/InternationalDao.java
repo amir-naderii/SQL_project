@@ -33,7 +33,7 @@ public class InternationalDao implements Repository<International, Integer>{
             ));
 
             sqlStm.put("insert",connection.prepareStatement(
-                    "INSERT INTO International SET VALUES(?)"
+                    "INSERT INTO International VALUES(?)"
             ));
         } catch (SQLException e) {
             e.printStackTrace();

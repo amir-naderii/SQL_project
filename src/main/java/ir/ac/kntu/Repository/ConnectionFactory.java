@@ -34,7 +34,7 @@ public class ConnectionFactory {
     public static void main(String[] args) throws SQLException {
         Connection connection = ConnectionFactory.getConnection();
         Bus_TicketDao bus_ticketDao = new Bus_TicketDao(connection);
-        bus_ticketDao.findAll().forEach(System.out::println);
+        System.out.println(bus_ticketDao.findById(0));
 
     }
 

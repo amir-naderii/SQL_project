@@ -17,7 +17,7 @@ public class Bus_TicketDao implements Repository<Bus_Ticket,Integer> {
 
     private void sqlStatements(Connection connection) {
         try {
-            sqlStm.put("findById",connection.prepareStatement(
+            sqlStm.put("findByID",connection.prepareStatement(
                "SELECT BT.* FROM Bus_Ticket BT where BT.id = ?"
             ));
             sqlStm.put("findAll",connection.prepareStatement(
@@ -39,8 +39,8 @@ public class Bus_TicketDao implements Repository<Bus_Ticket,Integer> {
 
     private Bus_Ticket extractFromResultSet(ResultSet Rs){
         try {
-            return new Bus_Ticket(Rs.getInt(0),
-                    Rs.getInt(1),Rs.getInt(2),Rs.getInt(3));
+            return new Bus_Ticket(Rs.getInt(1),
+                    Rs.getInt(2),Rs.getInt(3),Rs.getInt(4));
         } catch (SQLException e) {
             e.printStackTrace();
         }

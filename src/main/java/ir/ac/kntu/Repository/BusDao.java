@@ -13,7 +13,7 @@ public class BusDao implements Repository<Bus,Integer> {
         return null;
     }
 
-    public List<Bus> findByIDs(Collections ids) {
+    public List<Bus> findByIDs(Collection ids) {
         return null;
     }
 

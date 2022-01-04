@@ -12,7 +12,7 @@ public class Flight_TicketDao implements Repository<Flight_Ticket,Integer> {
         return null;
     }
 
-    public List<Flight_Ticket> findByIDs(Collections ids) {
+    public List<Flight_Ticket> findByIDs(Collection ids) {
         return null;
     }
 

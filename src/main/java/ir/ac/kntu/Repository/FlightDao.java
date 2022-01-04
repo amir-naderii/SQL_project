@@ -12,7 +12,7 @@ public class FlightDao implements Repository<Flight,Integer> {
         return null;
     }
 
-    public List<Flight> findByIDs(Collections ids) {
+    public List<Flight> findByIDs(Collection ids) {
         return null;
     }
 

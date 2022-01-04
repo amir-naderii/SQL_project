@@ -12,7 +12,7 @@ public class UserDao implements Repository<User,Integer> {
         return null;
     }
 
-    public List<User> findByIDs(Collections ids) {
+    public List<User> findByIDs(Collection ids) {
         return null;
     }
 

@@ -12,7 +12,7 @@ public class HotelDao implements Repository<Hotel,Integer> {
         return null;
     }
 
-    public List<Hotel> findByIDs(Collections ids) {
+    public List<Hotel> findByIDs(Collection ids) {
         return null;
     }
 

@@ -12,7 +12,7 @@ public class TransactionDao implements Repository<Transaction,Integer> {
         return null;
     }
 
-    public List<Transaction> findByIDs(Collections ids) {
+    public List<Transaction> findByIDs(Collection ids) {
         return null;
     }
 

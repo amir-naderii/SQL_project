@@ -12,7 +12,7 @@ public class RoomDao implements Repository<Room,Integer> {
         return null;
     }
 
-    public List<Room> findByIDs(Collections ids) {
+    public List<Room> findByIDs(Collection ids) {
         return null;
     }
 

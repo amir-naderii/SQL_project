@@ -43,7 +43,7 @@ public class BusDao implements Repository<Bus,Integer> {
         try {
             return new Bus(Rs.getInt(1),
                     Rs.getString(2), Rs.getString(3), Rs.getString(4),
-                    Rs.getString(5), Rs.getDate(6), Rs.getInt(8));
+                    Rs.getString(5), Rs.getDate(6), Rs.getInt(7));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -139,8 +139,8 @@ public class BusDao implements Repository<Bus,Integer> {
                 stmt.setString(4,E.getDestination_city());
                 stmt.setString(5,E.getDestination_terminal());
                 stmt.setDate(6,(java.sql.Date) E.getTravel_date());
-                stmt.setString(7,E.getCompany());
-                stmt.setInt(8,E.getCapacity());
+                stmt.setInt(7,E.getCapacity());
+                stmt.setString(8,E.getCompany());
                 return E;
             }else{
                 PreparedStatement stmt = sqlStm.get("update");
@@ -149,8 +149,8 @@ public class BusDao implements Repository<Bus,Integer> {
                 stmt.setString(3,E.getDestination_city());
                 stmt.setString(4,E.getDestination_terminal());
                 stmt.setDate(5,(java.sql.Date) E.getTravel_date());
-                stmt.setString(6,E.getCompany());
-                stmt.setInt(7,E.getCapacity());
+                stmt.setInt(6,E.getCapacity());
+                stmt.setString(7,E.getCompany());
                 stmt.setInt(8,E.getId());
                 return E;
             }

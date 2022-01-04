@@ -21,11 +21,11 @@ public class Hotel_Reservation {
         this.id = id;
     }
 
-    public Integer getHotel_id() {
+    public Integer getHotel_ticket_id() {
         return hotel_ticket_id;
     }
 
-    public void setHotel_id(Integer hotel_id) {
+    public void setHotel_ticket_id(Integer hotel_id) {
         this.hotel_ticket_id = hotel_id;
     }
 

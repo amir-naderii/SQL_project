@@ -33,7 +33,7 @@ public class TransactionDao implements Repository<Transaction,Integer> {
             ));
             sqlStm.put("update",connection.prepareStatement(
                     "UPDATE Transaction SET date = ?, amount = ?," +
-                            " credit_card_number = ?, charger_user_id = ?, type =?" +
+                            " credit_card_number = ?, charge_user_id = ?, type =?" +
                             " WHERE id = ?"
             ));
         } catch (SQLException e) {

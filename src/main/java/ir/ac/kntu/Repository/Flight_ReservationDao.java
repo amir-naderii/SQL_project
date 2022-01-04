@@ -23,10 +23,10 @@ public class Flight_ReservationDao implements Repository<Flight_Reservation,Inte
     private void sqlStatements(Connection con) {
         try {
             sqlStm.put("findByID",con.prepareStatement(
-                    "SELECT BR.* FROM Fight_Reservation BR where BR.id = ?"
+                    "SELECT FR.* FROM Fight_Reservation FR where FR.id = ?"
             ));
             sqlStm.put("findAll",con.prepareStatement(
-                    "SELECT BR.* FROM Fight_Reservation BR"
+                    "SELECT FR.* FROM Fight_Reservation FR"
             ));
             sqlStm.put("deleteByID",con.prepareStatement(
                     "DELETE FROM Fight_Reservation WHERE id = ?"

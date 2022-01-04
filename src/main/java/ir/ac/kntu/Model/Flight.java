@@ -10,10 +10,10 @@ public class Flight {
     private String destination_airport;
     private Date travel_date;
     private String company;
-    private int capacity;
+    private Integer capacity;
 
     public Flight(Integer id, String departure_city, String departure_airport, String destination_city,
-                  String destination_airport, Date travel_date, int capacity) {
+                  String destination_airport, Date travel_date, Integer capacity) {
         this.id = id;
         this.departure_city = departure_city;
         this.departure_airport = departure_airport;
@@ -79,11 +79,11 @@ public class Flight {
         this.company = company;
     }
 
-    public int getCapacity() {
+    public Integer getCapacity() {
         return capacity;
     }
 
-    public void setCapacity(int capacity) {
+    public void setCapacity(Integer capacity) {
         this.capacity = capacity;
     }
 

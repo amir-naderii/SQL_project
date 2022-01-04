@@ -28,13 +28,13 @@ public class Bus_ReservationDao implements Repository<Bus_Reservation,Integer> {
                     "SELECT BR.* FROM Bus_Reservation BR"
             ));
             sqlStm.put("deleteByID",con.prepareStatement(
-                    "DELETE FROM Bus_Reservation BR WHERE BR.id = ?"
+                    "DELETE FROM Bus_Reservation WHERE id = ?"
             ));
             sqlStm.put("insert",con.prepareStatement(
-                    "INSERT INTO Bus_Reservation SET VALUES(?,?,?,?)"
+                    "INSERT INTO Bus_Reservation VALUES(?,?,?,?)"
             ));
             sqlStm.put("update",con.prepareStatement(
-                    "UPDATE Bus_Ticket SET bus_ticket_id = ?, user_id  = ?, transaction_id = ? WHERE id = ?"
+                    "UPDATE Bus_Reservation SET bus_ticket_id = ?, user_id  = ?, transaction_id = ? WHERE id = ?"
             ));
         } catch (SQLException e) {
             e.printStackTrace();

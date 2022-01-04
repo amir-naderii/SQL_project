@@ -1,9 +1,13 @@
 package ir.ac.kntu.Repository;
 
+import ir.ac.kntu.Model.Bus_Ticket;
+
 import java.sql.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ConnectionFactory {
 
@@ -29,10 +33,9 @@ public class ConnectionFactory {
      */
     public static void main(String[] args) throws SQLException {
         Connection connection = ConnectionFactory.getConnection();
-        //Statement stmt = connection.createStatement();
-//        ResultSet rs = stmt.executeQuery("SELECT * " +
-//                "FROM [User] WHERE id=" + 5);
-        //System.out.println(rs.getInt("id"));
+        Bus_TicketDao bus_ticketDao = new Bus_TicketDao(connection);
+        bus_ticketDao.findAll().forEach(System.out::println);
+
     }
 
 }

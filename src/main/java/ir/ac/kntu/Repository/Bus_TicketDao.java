@@ -1,6 +1,5 @@
 package ir.ac.kntu.Repository;
 
-import ir.ac.kntu.Model.Bus;
 import ir.ac.kntu.Model.Bus_Ticket;
 
 import java.sql.Connection;
@@ -10,7 +9,7 @@ import java.sql.SQLException;
 import java.util.*;
 
 public class Bus_TicketDao implements Repository<Bus_Ticket,Integer> {
-    private HashMap<String, PreparedStatement> sqlStm = new HashMap<>();
+    private final HashMap<String, PreparedStatement> sqlStm = new HashMap<>();
 
     public Bus_TicketDao(Connection con){
         sqlStatements(con);

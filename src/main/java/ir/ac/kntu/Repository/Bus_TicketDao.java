@@ -2,32 +2,76 @@ package ir.ac.kntu.Repository;
 
 import ir.ac.kntu.Model.Bus_Ticket;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.*;
 
 public class Bus_TicketDao implements Repository<Bus_Ticket,Integer> {
+    HashMap<String, PreparedStatement> sqlStm = new HashMap<>();
 
-    public Bus_Ticket findById(Integer integer) {
+    private void sqlStatements(Connection connection) {
+        try {
+            sqlStm.put("findById",connection.prepareStatement(
+               "SELECT BT.* FROM Bus_Ticket BT where BT.id = ?"
+            ));
+            sqlStm.put("findAll",connection.prepareStatement(
+                    "SELECT BT.* FROM Bus_Ticket BT"
+            ));
+            sqlStm.put("deleteByID",connection.prepareStatement(
+                    "DELETE FROM Bus_Ticekt BT WHERE BT.id = ?"
+            ));
+            sqlStm.put("insert",connection.prepareStatement(
+                    "INSERT INTO Bus_Ticekt SET VALUES(?,?,?,?)"
+            ));
+            sqlStm.put("update",connection.prepareStatement(
+                    "UPDATE Bus_Ticket SET id = ?, passengers = ?, price = ?, bus_id = ?"
+            ));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public Bus_Ticket findById(Integer ID) {
+        try{
+            PreparedStatement stmt = sqlStm.get("findByID");
+            stmt.setInt(1,ID);
+            ResultSet Rs = stmt.executeQuery();
+            if(Rs.next()){
+                Bus_Ticket bus_ticket = new Bus_Ticket(Rs.getInt(0),
+                        Rs.getInt(1),Rs.getInt(2),Rs.getInt(3));
+                return bus_ticket;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
-    public List<Bus_Ticket> findByIDs(Collections ids) {
+    @Override
+    public List<Bus_Ticket> findByIDs(Collection<Integer> IDs) {
+
         return null;
     }
 
+    @Override
     public List<Bus_Ticket> findAll() {
         return null;
     }
 
-    public Boolean deleteByID(Integer integer) {
+    @Override
+    public Boolean deleteByID(Integer ID) {
         return null;
     }
 
-    public Boolean DeleteByIDs(Collection<Integer> integers) {
+    @Override
+    public Boolean DeleteByIDs(Collection<Integer> IDs) {
         return null;
     }
 
+    @Override
     public Bus_Ticket save(Bus_Ticket E) {
         return null;
     }

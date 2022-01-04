@@ -10,9 +10,10 @@ public class Bus {
     private String destination_terminal;
     private Date travel_date;
     private String company;
+    private Integer capacity;
 
     public Bus(Integer id, String departure_city, String departure_terminal, String destination_city,
-               String destination_terminal, Date travel_date) {
+               String destination_terminal, Date travel_date, Integer capacity) {
         this.id = id;
         this.departure_city = departure_city;
         this.departure_terminal = departure_terminal;
@@ -77,6 +78,14 @@ public class Bus {
         this.company = company;
     }
 
+    public Integer getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(Integer capacity) {
+        this.capacity = capacity;
+    }
+
     @Override
     public String toString() {
         return "Bus{" +
@@ -87,6 +96,7 @@ public class Bus {
                 ", destination_terminal='" + destination_terminal + '\'' +
                 ", travel_date=" + travel_date +
                 ", company='" + company + '\'' +
+                ", capacity=" + capacity +
                 '}';
     }
 }

@@ -10,15 +10,17 @@ public class Flight {
     private String destination_airport;
     private Date travel_date;
     private String company;
+    private int capacity;
 
     public Flight(Integer id, String departure_city, String departure_airport, String destination_city,
-                  String destination_airport, Date travel_date) {
+                  String destination_airport, Date travel_date, int capacity) {
         this.id = id;
         this.departure_city = departure_city;
         this.departure_airport = departure_airport;
         this.destination_city = destination_city;
         this.destination_airport = destination_airport;
         this.travel_date = travel_date;
+        this.capacity = capacity;
     }
 
     public Integer getId() {
@@ -77,6 +79,14 @@ public class Flight {
         this.company = company;
     }
 
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
     @Override
     public String toString() {
         return "Flight{" +
@@ -87,6 +97,7 @@ public class Flight {
                 ", destination_airport='" + destination_airport + '\'' +
                 ", travel_date=" + travel_date +
                 ", company='" + company + '\'' +
+                ", capacity=" + capacity +
                 '}';
     }
 }

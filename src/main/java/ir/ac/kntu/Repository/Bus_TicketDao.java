@@ -24,10 +24,10 @@ public class Bus_TicketDao implements Repository<Bus_Ticket,Integer> {
                     "SELECT BT.* FROM Bus_Ticket BT"
             ));
             sqlStm.put("deleteByID",connection.prepareStatement(
-                    "DELETE FROM Bus_Ticekt BT WHERE BT.id = ?"
+                    "DELETE FROM Bus_Ticekt WHERE id = ?"
             ));
             sqlStm.put("insert",connection.prepareStatement(
-                    "INSERT INTO Bus_Ticekt SET VALUES(?,?,?,?)"
+                    "INSERT INTO Bus_Ticekt VALUES(?,?,?,?)"
             ));
             sqlStm.put("update",connection.prepareStatement(
                     "UPDATE Bus_Ticket SET passengers = ?, price = ?, bus_id = ? WHERE id = ?"

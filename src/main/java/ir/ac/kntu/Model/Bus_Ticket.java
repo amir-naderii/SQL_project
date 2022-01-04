@@ -6,16 +6,6 @@ public class Bus_Ticket {
     private Integer price;
     private Integer bus_id;
 
-    @Override
-    public String toString() {
-        return "Bus_Ticket{" +
-                "id=" + id +
-                ", passengers=" + passengers +
-                ", price=" + price +
-                ", bus_id=" + bus_id +
-                '}';
-    }
-
     public Bus_Ticket(Integer id, Integer passengers, Integer price, Integer bus_id) {
         this.id = id;
         this.passengers = passengers;

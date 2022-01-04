@@ -4,13 +4,13 @@ public class Flight_Reservation {
     private Integer id;
     private Integer flight_ticket_id;
     private Integer user_id;
-    private Integer transaction;
+    private Integer transaction_id;
 
-    public Flight_Reservation(Integer id, Integer flight_ticket_id, Integer user_id, Integer transaction) {
+    public Flight_Reservation(Integer id, Integer flight_ticket_id, Integer user_id, Integer transaction_id) {
         this.id = id;
         this.flight_ticket_id = flight_ticket_id;
         this.user_id = user_id;
-        this.transaction = transaction;
+        this.transaction_id = transaction_id;
     }
 
     public Integer getId() {
@@ -37,12 +37,12 @@ public class Flight_Reservation {
         this.user_id = user_id;
     }
 
-    public Integer getTransaction() {
-        return transaction;
+    public Integer getTransaction_id() {
+        return transaction_id;
     }
 
-    public void setTransaction(Integer transaction) {
-        this.transaction = transaction;
+    public void setTransaction_id(Integer transaction_id) {
+        this.transaction_id = transaction_id;
     }
 
     @Override
@@ -51,7 +51,7 @@ public class Flight_Reservation {
                 "id=" + id +
                 ", flight_ticket_id=" + flight_ticket_id +
                 ", user_id=" + user_id +
-                ", transaction=" + transaction +
+                ", transaction_id=" + transaction_id +
                 '}';
     }
 }

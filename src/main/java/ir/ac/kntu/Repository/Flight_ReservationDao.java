@@ -145,6 +145,7 @@ public class Flight_ReservationDao implements Repository<Flight_Reservation,Inte
                 stmt.setInt(2,E.getFlight_ticket_id());
                 stmt.setInt(3,E.getUser_id());
                 stmt.setInt(4,E.getTransaction_id());
+                stmt.executeUpdate();
                 return E;
             }else{
                 PreparedStatement stmt = sqlStm.get("update");
@@ -152,6 +153,7 @@ public class Flight_ReservationDao implements Repository<Flight_Reservation,Inte
                 stmt.setInt(2,E.getUser_id());
                 stmt.setInt(3,E.getTransaction_id());
                 stmt.setInt(4,E.getId());
+                stmt.executeUpdate();
                 return E;
             }
         } catch (SQLException e) {

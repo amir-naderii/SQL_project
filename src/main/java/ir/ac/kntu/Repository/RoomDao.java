@@ -135,6 +135,7 @@ public class RoomDao implements Repository<Room,Integer> {
                 stmt.setInt(2,E.getHotel_id());
                 stmt.setString(3,E.getType());
                 stmt.setInt(4,E.getCapacity());
+                stmt.executeUpdate();
                 return E;
             }else{
                 PreparedStatement stmt = sqlStm.get("update");
@@ -142,6 +143,7 @@ public class RoomDao implements Repository<Room,Integer> {
                 stmt.setString(2,E.getType());
                 stmt.setInt(3,E.getCapacity());
                 stmt.setInt(4,E.getId());
+                stmt.executeUpdate();
                 return E;
             }
         } catch (SQLException e) {

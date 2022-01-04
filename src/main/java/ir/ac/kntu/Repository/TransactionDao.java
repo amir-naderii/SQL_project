@@ -141,6 +141,7 @@ public class TransactionDao implements Repository<Transaction,Integer> {
                 stmt.setString(4, E.getCredit_card_number());
                 stmt.setInt(5, E.getCharge_user_id());
                 stmt.setString(6, E.getType());
+                stmt.executeUpdate();
                 return E;
             }else{
                 PreparedStatement stmt = sqlStm.get("update");
@@ -150,6 +151,7 @@ public class TransactionDao implements Repository<Transaction,Integer> {
                 stmt.setInt(4, E.getCharge_user_id());
                 stmt.setString(5, E.getType());
                 stmt.setInt(6, E.getId());
+                stmt.executeUpdate();
                 return E;
             }
         } catch (SQLException e) {

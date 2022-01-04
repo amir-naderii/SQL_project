@@ -144,6 +144,7 @@ public class UserDao implements Repository<User,Integer> {
                 stmt.setDate(4,(java.sql.Date) E.getCreation_date());
                 stmt.setDate(5, (java.sql.Date) E.getModification_date());
                 stmt.setString(6, E.getModification_reason());
+                stmt.executeUpdate();
                 return E;
             }else{
                 PreparedStatement stmt = sqlStm.get("update");
@@ -153,6 +154,7 @@ public class UserDao implements Repository<User,Integer> {
                 stmt.setDate(4, (java.sql.Date) E.getModification_date());
                 stmt.setString(5, E.getModification_reason());
                 stmt.setInt(6,E.getId());
+                stmt.executeUpdate();
                 return E;
             }
         } catch (SQLException e) {

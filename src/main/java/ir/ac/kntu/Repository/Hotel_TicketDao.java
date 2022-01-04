@@ -146,6 +146,7 @@ public class Hotel_TicketDao implements Repository<Hotel_Ticket,Integer> {
                 stmt.setDate(4,(java.sql.Date) E.getCheck_out());
                 stmt.setInt(5, E.getHotel_id());
                 stmt.setInt(6, E.getRoom_id());
+                stmt.executeUpdate();
                 return E;
             }else{
                 PreparedStatement stmt = sqlStm.get("update");
@@ -155,6 +156,7 @@ public class Hotel_TicketDao implements Repository<Hotel_Ticket,Integer> {
                 stmt.setInt(4, E.getHotel_id());
                 stmt.setInt(5, E.getRoom_id());
                 stmt.setInt(6,E.getId());
+                stmt.executeUpdate();
                 return E;
             }
         } catch (SQLException e) {

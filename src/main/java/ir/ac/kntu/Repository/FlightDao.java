@@ -29,12 +29,12 @@ public class FlightDao implements Repository<Flight,Integer> {
                     "DELETE FROM Flight WHERE id = ?"
             ));
             sqlStm.put("insert",connection.prepareStatement(
-                    "INSERT INTO Flight VALUES(?,?,?,?)"
+                    "INSERT INTO Flight VALUES(?,?,?,?,?,?,?,?)"
             ));
             sqlStm.put("update",connection.prepareStatement(
                     "UPDATE Flight SET departure_city = ?, departure_airport = ?," +
                             " destination_city = ?, destination_airport = ?, travel_date =?," +
-                            " company = ?, capacity = ? WHERE id = ?"
+                            " capacity = ?, company = ? WHERE id = ?"
             ));
         } catch (SQLException e) {
             e.printStackTrace();
@@ -149,6 +149,7 @@ public class FlightDao implements Repository<Flight,Integer> {
                 stmt.setDate(6, (java.sql.Date) E.getTravel_date());
                 stmt.setInt(7, E.getCapacity());
                 stmt.setString(8, E.getCompany());
+                stmt.executeUpdate();
                 return E;
             }else{
                 PreparedStatement stmt = sqlStm.get("update");
@@ -160,6 +161,7 @@ public class FlightDao implements Repository<Flight,Integer> {
                 stmt.setInt(6, E.getCapacity());
                 stmt.setString(7, E.getCompany());
                 stmt.setInt(8, E.getId());
+                stmt.executeUpdate();
                 return E;
             }
         } catch (SQLException e) {

@@ -141,6 +141,7 @@ public class BusDao implements Repository<Bus,Integer> {
                 stmt.setDate(6,(java.sql.Date) E.getTravel_date());
                 stmt.setInt(7,E.getCapacity());
                 stmt.setString(8,E.getCompany());
+                stmt.executeUpdate();
                 return E;
             }else{
                 PreparedStatement stmt = sqlStm.get("update");
@@ -152,6 +153,7 @@ public class BusDao implements Repository<Bus,Integer> {
                 stmt.setInt(6,E.getCapacity());
                 stmt.setString(7,E.getCompany());
                 stmt.setInt(8,E.getId());
+                stmt.executeUpdate();
                 return E;
             }
         } catch (SQLException e) {

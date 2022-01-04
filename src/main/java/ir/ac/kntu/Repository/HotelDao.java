@@ -141,8 +141,8 @@ public class HotelDao implements Repository<Hotel,Integer> {
                 stmt.setString(4,E.getAddress());
                 stmt.setString(5,E.getName());
                 stmt.setString(6, E.getFacilities());
-                stmt.setObject(7, E.getHotel_type());
-
+                stmt.setInt(7, E.getHotel_type().id);
+                stmt.executeUpdate();
                 return E;
             }else{
                 PreparedStatement stmt = sqlStm.get("update");
@@ -151,8 +151,9 @@ public class HotelDao implements Repository<Hotel,Integer> {
                 stmt.setString(3,E.getAddress());
                 stmt.setString(4,E.getName());
                 stmt.setString(5, E.getFacilities());
-                stmt.setObject(6, E.getHotel_type());
+                stmt.setInt(6, E.getHotel_type().id);
                 stmt.setInt(7, E.getId());
+                stmt.executeUpdate();
                 return E;
             }
         } catch (SQLException e) {

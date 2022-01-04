@@ -118,6 +118,7 @@ public class DomesticDao implements Repository<Domestic, Integer>{
             PreparedStatement stmt = sqlStm.get("insert");
             try {
                 stmt.setInt(1,E.getId());
+                stmt.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
             }

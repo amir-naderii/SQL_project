@@ -27,10 +27,11 @@ public class Bus_TicketDao implements Repository<Bus_Ticket,Integer> {
                     "DELETE FROM Bus_Ticket WHERE id = ?"
             ));
             sqlStm.put("insert",connection.prepareStatement(
-                    "INSERT INTO Bus_Ticket VALUES(?,?,?,?)"
+                    "INSERT INTO Bus_Ticket VALUES(?,?,?,?,?)"
             ));
             sqlStm.put("update",connection.prepareStatement(
-                    "UPDATE Bus_Ticket SET passengers = ?, price = ?, bus_id = ? WHERE id = ?"
+                    "UPDATE Bus_Ticket SET passengers = ?, price = ?, bus_id = ?," +
+                            " seat_num = ? WHERE id = ?"
             ));
         } catch (SQLException e) {
             e.printStackTrace();
@@ -40,7 +41,7 @@ public class Bus_TicketDao implements Repository<Bus_Ticket,Integer> {
     private Bus_Ticket extractFromResultSet(ResultSet Rs){
         try {
             return new Bus_Ticket(Rs.getInt(1),
-                    Rs.getInt(2),Rs.getInt(3),Rs.getInt(4));
+                    Rs.getInt(2),Rs.getInt(3),Rs.getInt(4), Rs.getInt(5));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -140,13 +141,17 @@ public class Bus_TicketDao implements Repository<Bus_Ticket,Integer> {
                 stmt.setInt(2,E.getPassengers());
                 stmt.setInt(3,E.getPrice());
                 stmt.setInt(4,E.getBus_id());
+                stmt.setInt(5,E.getSeat_number());
+                stmt.executeUpdate();
                 return E;
             }else{
                 PreparedStatement stmt = sqlStm.get("update");
                 stmt.setInt(1,E.getPassengers());
                 stmt.setInt(2,E.getPrice());
                 stmt.setInt(3,E.getBus_id());
-                stmt.setInt(4,E.getId());
+                stmt.setInt(4,E.getSeat_number());
+                stmt.setInt(5,E.getId());
+                stmt.executeUpdate();
                 return E;
             }
         } catch (SQLException e) {

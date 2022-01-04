@@ -15,10 +15,6 @@ public class ConnectionFactory {
     public static final String USER = "Tanaz";
     public static final String PASS = "tanaz";
 
-    /**
-     * Get a connection to database
-     * @return Connection object
-     */
     public static Connection getConnection()
     {
         try {
@@ -26,16 +22,6 @@ public class ConnectionFactory {
         } catch (SQLException ex) {
             throw new RuntimeException("Error connecting to the database", ex);
         }
-    }
-
-    /**
-     * Test Connection
-     */
-    public static void main(String[] args) throws SQLException {
-        Connection connection = ConnectionFactory.getConnection();
-        Bus_TicketDao bus_ticketDao = new Bus_TicketDao(connection);
-        System.out.println(bus_ticketDao.findById(0));
-
     }
 
 }

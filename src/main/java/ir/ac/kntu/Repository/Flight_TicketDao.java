@@ -143,6 +143,7 @@ public class Flight_TicketDao implements Repository<Flight_Ticket,Integer> {
                 stmt.setInt(3,E.getPrice());
                 stmt.setString(4,E.getFlight_type());
                 stmt.setString(5,E.getFlight_class());
+                stmt.executeUpdate();
                 return E;
             }else{
                 PreparedStatement stmt = sqlStm.get("update");
@@ -151,6 +152,7 @@ public class Flight_TicketDao implements Repository<Flight_Ticket,Integer> {
                 stmt.setString(3,E.getFlight_type());
                 stmt.setString(4,E.getFlight_class());
                 stmt.setInt(5,E.getId());
+                stmt.executeUpdate();
                 return E;
             }
         } catch (SQLException e) {

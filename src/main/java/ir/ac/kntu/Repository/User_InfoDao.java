@@ -142,6 +142,7 @@ public class User_InfoDao implements Repository<User_Info, String> {
                 stmt.setString(5,E.getGender());
                 stmt.setDate(6, (java.sql.Date)E.getBirth_date());
                 stmt.setString(7, E.getPass());
+                stmt.executeUpdate();
                 return E;
             }else{
                 PreparedStatement stmt = sqlStm.get("update");
@@ -152,6 +153,7 @@ public class User_InfoDao implements Repository<User_Info, String> {
                 stmt.setDate(5, (java.sql.Date)E.getBirth_date());
                 stmt.setString(6, E.getPass());
                 stmt.setString(7, E.getId_number());
+                stmt.executeUpdate();
                 return E;
             }
         } catch (SQLException e) {

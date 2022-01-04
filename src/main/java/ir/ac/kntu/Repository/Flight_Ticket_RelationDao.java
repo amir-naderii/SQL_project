@@ -145,12 +145,14 @@ public class Flight_Ticket_RelationDao implements Repository<Flight_Ticket_Relat
                 stmt.setInt(1,E.getId());
                 stmt.setInt(2,E.getFlight_id());
                 stmt.setInt(3,E.getFlight_ticket_id());
+                stmt.executeUpdate();
                 return E;
             }else{
                 PreparedStatement stmt = sqlStm.get("update");
                 stmt.setInt(1,E.getFlight_ticket_id());
                 stmt.setInt(2,E.getFlight_id());
                 stmt.setInt(3,E.getId());
+                stmt.executeUpdate();
                 return E;
             }
         } catch (SQLException e) {

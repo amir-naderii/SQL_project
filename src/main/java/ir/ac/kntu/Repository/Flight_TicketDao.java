@@ -30,7 +30,7 @@ public class Flight_TicketDao implements Repository<Flight_Ticket,Integer> {
                     "DELETE FROM Flight_Ticket WHERE id = ?"
             ));
             sqlStm.put("insert",connection.prepareStatement(
-                    "INSERT INTO Flight_Ticket VALUES(?,?,?,?)"
+                    "INSERT INTO Flight_Ticket VALUES(?,?,?,?,?)"
             ));
             sqlStm.put("update",connection.prepareStatement(
                     "UPDATE Flight_Ticket SET passengers = ?, price = ?, flight_type =?" +

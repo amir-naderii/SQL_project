@@ -1,0 +1,41 @@
+Index: src/main/java/ir/ac/kntu/Repository/ConnectionFactory.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ir.ac.kntu.Repository;\r\n\r\nimport ir.ac.kntu.Model.Bus_Ticket;\r\n\r\nimport java.sql.*;\r\nimport java.sql.Connection;\r\nimport java.sql.DriverManager;\r\nimport java.sql.SQLException;\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\n\r\npublic class ConnectionFactory {\r\n\r\n    public static final String URL = \"jdbc:sqlserver://localhost:1433;database=AliBaba\";\r\n    public static final String USER = \"Tanaz\";\r\n    public static final String PASS = \"tanaz\";\r\n\r\n    /**\r\n     * Get a connection to database\r\n     * @return Connection object\r\n     */\r\n    public static Connection getConnection()\r\n    {\r\n        try {\r\n            return DriverManager.getConnection(URL, USER, PASS);\r\n        } catch (SQLException ex) {\r\n            throw new RuntimeException(\"Error connecting to the database\", ex);\r\n        }\r\n    }\r\n\r\n    /**\r\n     * Test Connection\r\n     */\r\n    public static void main(String[] args) throws SQLException {\r\n        Connection connection = ConnectionFactory.getConnection();\r\n        Bus_TicketDao bus_ticketDao = new Bus_TicketDao(connection);\r\n        bus_ticketDao.findAll().forEach(System.out::println);\r\n\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/ir/ac/kntu/Repository/ConnectionFactory.java b/src/main/java/ir/ac/kntu/Repository/ConnectionFactory.java
+--- a/src/main/java/ir/ac/kntu/Repository/ConnectionFactory.java	(revision 25069e40a3f89f76d60b2595c0f15a665fe599d9)
++++ b/src/main/java/ir/ac/kntu/Repository/ConnectionFactory.java	(date 1641285206281)
+@@ -12,8 +12,8 @@
+ public class ConnectionFactory {
+ 
+     public static final String URL = "jdbc:sqlserver://localhost:1433;database=AliBaba";
+-    public static final String USER = "Tanaz";
+-    public static final String PASS = "tanaz";
++    public static final String USER = "Neginm";
++    public static final String PASS = "788056";
+ 
+     /**
+      * Get a connection to database
+Index: .idea/dataSources.xml
+===================================================================
+diff --git a/.idea/dataSources.xml b/.idea/dataSources.xml
+deleted file mode 100644
+--- a/.idea/dataSources.xml	(revision 25069e40a3f89f76d60b2595c0f15a665fe599d9)
++++ /dev/null	(revision 25069e40a3f89f76d60b2595c0f15a665fe599d9)
+@@ -1,12 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+-    <data-source source="LOCAL" name="AliBaba@localhost" uuid="cdc287ee-6f02-48e6-a7d0-5cda8adeaa45">
+-      <driver-ref>sqlserver.ms</driver-ref>
+-      <synchronize>true</synchronize>
+-      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+-      <jdbc-url>jdbc:sqlserver://localhost:1433;database=AliBaba</jdbc-url>
+-      <working-dir>$ProjectFileDir$</working-dir>
+-    </data-source>
+-  </component>
+-</project>
+\ No newline at end of file

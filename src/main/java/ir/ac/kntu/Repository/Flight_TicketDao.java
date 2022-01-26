@@ -1,7 +1,5 @@
 package ir.ac.kntu.Repository;
 
-import ir.ac.kntu.Model.Bus_Ticket;
-import ir.ac.kntu.Model.Flight;
 import ir.ac.kntu.Model.Flight_Ticket;
 
 import java.sql.Connection;

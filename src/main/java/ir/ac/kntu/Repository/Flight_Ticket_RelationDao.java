@@ -1,10 +1,7 @@
 package ir.ac.kntu.Repository;
 
-import ir.ac.kntu.Model.Bus_Reservation;
-import ir.ac.kntu.Model.Flight_Reservation;
 import ir.ac.kntu.Model.Flight_Ticket_Relation;
 
-import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

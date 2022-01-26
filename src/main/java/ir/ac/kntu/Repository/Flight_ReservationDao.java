@@ -1,9 +1,7 @@
 package ir.ac.kntu.Repository;
 
-import ir.ac.kntu.Model.Bus_Reservation;
 import ir.ac.kntu.Model.Flight_Reservation;
 
-import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,7 +11,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 
-public class Flight_ReservationDao implements Repository<Flight_Reservation,Integer>{
+public class Flight_ReservationDao implements Repository<Flight_Reservation,Integer> {
     private HashMap<String, PreparedStatement> sqlStm = new HashMap<>();
 
     public Flight_ReservationDao(Connection con){

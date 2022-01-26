@@ -7,9 +7,9 @@ public class Hotel {
     private String address;
     private String name;
     private String facilities;
-    private Hotel_type hotel_type;
+    private Integer hotel_type;
 
-    public Hotel(Integer id, Integer stars, Integer popularity, String address, String name, String facilities, Hotel_type hotel_type) {
+    public Hotel(Integer id, Integer stars, Integer popularity, String address, String name, String facilities, Integer hotel_type) {
         this.id = id;
         this.stars = stars;
         this.popularity = popularity;
@@ -67,11 +67,11 @@ public class Hotel {
         this.facilities = facilities;
     }
 
-    public Hotel_type getHotel_type() {
+    public Integer getHotel_type() {
         return hotel_type;
     }
 
-    public void setHotel_type(Hotel_type hotel_type) {
+    public void setHotel_type(Integer hotel_type) {
         this.hotel_type = hotel_type;
     }
 

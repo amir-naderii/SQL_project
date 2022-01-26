@@ -1,6 +1,5 @@
 package ir.ac.kntu.Repository;
 
-import ir.ac.kntu.Model.Hotel_Ticket;
 import ir.ac.kntu.Model.User;
 
 import java.sql.Connection;

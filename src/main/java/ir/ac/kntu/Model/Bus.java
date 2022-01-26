@@ -20,6 +20,7 @@ public class Bus {
         this.destination_city = destination_city;
         this.destination_terminal = destination_terminal;
         this.travel_date = travel_date;
+        this.capacity = capacity;
     }
 
     public Integer getId() {

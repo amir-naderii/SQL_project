@@ -1,7 +1,5 @@
 package ir.ac.kntu.Repository;
 
-import ir.ac.kntu.Model.Hotel;
-import ir.ac.kntu.Model.Hotel_type;
 import ir.ac.kntu.Model.Transaction;
 
 import java.sql.Connection;
@@ -20,19 +18,19 @@ public class TransactionDao implements Repository<Transaction,Integer> {
     private void sqlStatements(Connection connection) {
         try {
             sqlStm.put("findByID",connection.prepareStatement(
-                    "SELECT T.* FROM Transaction T where T.id = ?"
+                    "SELECT T.* FROM [Transaction] T where T.id = ?"
             ));
             sqlStm.put("findAll",connection.prepareStatement(
-                    "SELECT T.* FROM transaction T"
+                    "SELECT T.* FROM [Transaction] T"
             ));
             sqlStm.put("deleteByID",connection.prepareStatement(
-                    "DELETE FROM Transaction WHERE id = ?"
+                    "DELETE FROM [Transaction] WHERE id = ?"
             ));
             sqlStm.put("insert",connection.prepareStatement(
-                    "INSERT INTO Transaction VALUES(?,?,?,?,?,?)"
+                    "INSERT INTO [Transaction] VALUES(?,?,?,?,?,?)"
             ));
             sqlStm.put("update",connection.prepareStatement(
-                    "UPDATE Transaction SET date = ?, amount = ?," +
+                    "UPDATE [Transaction] SET date = ?, amount = ?," +
                             " credit_card_number = ?, charge_user_id = ?, type =?" +
                             " WHERE id = ?"
             ));
@@ -89,6 +87,9 @@ public class TransactionDao implements Repository<Transaction,Integer> {
         try {
             PreparedStatement stmt = sqlStm.get("findAll");
             ResultSet Rs = stmt.executeQuery();
+            if (Rs == null) {
+                System.out.println("'bia");
+            }
             ArrayList<Transaction> transactions = new ArrayList<>();
             while (Rs.next()){
                 Transaction transaction = extractFromResultSet(Rs);

@@ -1,8 +1,5 @@
 package ir.ac.kntu.Repository;
 
-import ir.ac.kntu.Model.Hotel;
-import ir.ac.kntu.Model.Hotel_type;
-import ir.ac.kntu.Model.User;
 import ir.ac.kntu.Model.User_Info;
 
 import java.sql.Connection;
@@ -35,6 +32,9 @@ public class User_InfoDao implements Repository<User_Info, String> {
             sqlStm.put("update",connection.prepareStatement(
                     "UPDATE User_Info SET email = ?, phone_number = ?, full_name" +
                             ", gender = ?, birth_date = ?, Pass WHERE id_number = ?"
+            ));
+            sqlStm.put("findPass", connection.prepareStatement(
+                    "SELECT UI.pass FROM User_Info UI WHERE UI.id_number = ?"
             ));
         } catch (SQLException e) {
             e.printStackTrace();
@@ -155,6 +155,20 @@ public class User_InfoDao implements Repository<User_Info, String> {
                 stmt.setString(7, E.getId_number());
                 stmt.executeUpdate();
                 return E;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public String findPass(String ID) {
+        try{
+            PreparedStatement stmt = sqlStm.get("findByID");
+            stmt.setString(1,ID);
+            ResultSet Rs = stmt.executeQuery();
+            if(Rs.next()){
+                return extractFromResultSet(Rs).getPass();
             }
         } catch (SQLException e) {
             e.printStackTrace();

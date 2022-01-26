@@ -1,7 +1,5 @@
 package ir.ac.kntu.Repository;
 
-import ir.ac.kntu.Model.Flight_Reservation;
-import ir.ac.kntu.Model.Hotel_Reservation;
 import ir.ac.kntu.Model.Room;
 
 import java.sql.Connection;

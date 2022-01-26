@@ -1,8 +1,6 @@
 package ir.ac.kntu.Repository;
 
-import ir.ac.kntu.Model.Flight;
 import ir.ac.kntu.Model.Hotel;
-import ir.ac.kntu.Model.Hotel_type;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -45,7 +43,7 @@ public class HotelDao implements Repository<Hotel,Integer> {
         try {
             return new Hotel(Rs.getInt(1),
                     Rs.getInt(2),Rs.getInt(3),Rs.getString(4),
-                    Rs.getString(5), Rs.getString(6), Rs.getObject(7,Hotel_type.class));
+                    Rs.getString(5), Rs.getString(6), Rs.getInt(7));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -141,7 +139,7 @@ public class HotelDao implements Repository<Hotel,Integer> {
                 stmt.setString(4,E.getAddress());
                 stmt.setString(5,E.getName());
                 stmt.setString(6, E.getFacilities());
-                stmt.setInt(7, E.getHotel_type().id);
+                stmt.setInt(7, E.getHotel_type());
                 stmt.executeUpdate();
                 return E;
             }else{
@@ -151,7 +149,7 @@ public class HotelDao implements Repository<Hotel,Integer> {
                 stmt.setString(3,E.getAddress());
                 stmt.setString(4,E.getName());
                 stmt.setString(5, E.getFacilities());
-                stmt.setInt(6, E.getHotel_type().id);
+                stmt.setInt(6, E.getHotel_type());
                 stmt.setInt(7, E.getId());
                 stmt.executeUpdate();
                 return E;

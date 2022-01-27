@@ -510,7 +510,7 @@ public class Menu {
                                         sqlDate));
                                 break;
                         }
-                        System.out.println("Enter the transaction infos: date/amount/cardNum/userID/type");
+                        System.out.println("Enter the transaction infos: amount/cardNum/type");
                         Integer tid=0;
                         while (aliBaba.findByIDNoPrint("T", tid)!=null) {
                             tid = new Random().nextInt(1000000);
@@ -584,7 +584,7 @@ public class Menu {
                                         sqlDate));
                                 break;
                         }
-                        System.out.println("Enter the transaction infos: date/amount/cardNum/userID/type");
+                        System.out.println("Enter the transaction infos: amount/cardNum/type");
                         Integer tid=0;
                         while (aliBaba.findByIDNoPrint("T", tid)!=null) {
                             tid = new Random().nextInt(1000000);
@@ -657,7 +657,7 @@ public class Menu {
                                         sqlDate));
                                 break;
                         }
-                        System.out.println("Enter the transaction infos: date/amount/cardNum/userID/type");
+                        System.out.println("Enter the transaction infos: amount/cardNum/type");
                         Integer tid=0;
                         while (aliBaba.findByIDNoPrint("T", tid)!=null) {
                             tid = new Random().nextInt(1000000);
